@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Menus - Lucas Mello</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <script src="js/editor.js" defer></script>
+</head>
+
+<body>
+    <header id="topo">
+        <img src="assets/img/logo-transparent.webp" alt="Logo Lucas Mello">
+        <h1 id="titulo_destaque">Portfólio Semestral</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="editor.html">Trabalho 1</a></li>
+                <li><a href="trabalho-2.html">Trabalho 2</a></li>
+                <li><a href="trabalho-3.html">Trabalho 3</a></li>
+                <li><a href="trabalho-4.html">Trabalho 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="editor">
+            <h2>Editor de menus</h2>
+            <div class="editor-layout">
+                <form id="formulario">
+                    <label for="novo-item">Texto do item</label>
+                    <input type="text" id="novo-item" maxlength="30">
+                    <div id="erro" role="alert"></div>
+                    <label for="cor-elemento">Cor de fundo do novo item</label>
+                    <input type="color" id="cor-elemento" value="#393e46">
+                    <label for="cor-texto">Cor do texto do novo item</label>
+                    <input type="color" id="cor-texto" value="#a3c4a8">
+                    <label for="cor-borda">Cor da borda do novo item</label>
+                    <input type="color" id="cor-borda" value="#5c635d">
+                    <label for="tamanho-elemento">Espaçamento interno do novo item</label>
+                    <input type="range" id="tamanho-elemento" min="4" max="24" value="8">
+                    <label for="tamanho-texto">Tamanho do texto do novo item</label>
+                    <input type="range" id="tamanho-texto" min="12" max="24" value="16">
+                    <label for="arredondamento">Arredondamento da borda do novo item</label>
+                    <input type="range" id="arredondamento" min="0" max="24" value="8">
+                    <button type="button" id="btn-adicionar">Adicionar</button>
+                    <button type="button" id="btn-atualizar">Atualizar item selecionado</button>
+                    <button type="button" id="btn-excluir">Excluir</button>
+                    <label for="cor-menu">Cor de fundo do menu</label>
+                    <input type="color" id="cor-menu" value="#323f38">
+                    <label for="espacamento-menu">Espaçamento entre os itens</label>
+                    <input type="range" id="espacamento-menu" min="0" max="32" value="8">
+                    <label for="direcao-menu">Direção dos itens</label>
+                    <select id="direcao-menu">
+                        <option value="row">Horizontal</option>
+                        <option value="column">Vertical</option>
+                    </select>
+                    <label for="imagem-menu">Imagem do menu</label>
+                    <input type="file" id="imagem-menu" accept="image/*">
+                </form>
+                <section class="menu-preview" aria-labelledby="titulo-preview">
+                    <h3 id="titulo-preview">Menu gerado</h3>
+                    <div class="preview-content" id="preview-content">
+                        <div class="menu-gerado" id="menu-gerado"></div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <a href="#topo">Voltar ao topo</a>
+    </main>
+    <footer>
+        <p>Página desenvolvida por: Lucas Melo De Mello</p>
+    </footer>
+</body>
+
+</html>

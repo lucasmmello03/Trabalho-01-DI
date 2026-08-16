@@ -1,0 +1,209 @@
+#titulo_destaque {
+    margin-top: var(--space-2);
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--space-1);
+    margin: 0;
+    padding: var(--space-2);
+    list-style: none;
+    background-color: var(--color-bg-nav);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.menu a {
+    display: block;
+    padding: var(--space-1) var(--space-2);
+    color: var(--color-link);
+    font-size: clamp(0.875rem, 2vw, 1.25rem);
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.menu a:hover,
+.menu a:focus-visible {
+    background-color: var(--color-bg-surface);
+    color: var(--color-link-hover);
+    border-radius: var(--space-1);
+}
+
+.editor label {
+    display: block;
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-1);
+}
+
+#erro {
+    min-height: 1.5rem;
+    margin-top: var(--space-1);
+    color: var(--color-error);
+}
+
+.editor-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.editor form {
+    flex: 1;
+    padding: var(--space-3);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.menu-preview {
+    flex: 1;
+    min-width: 0;
+    padding: var(--space-3);
+    background-color: var(--color-bg-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.menu-preview h3 {
+    margin-bottom: var(--space-2);
+}
+
+.preview-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+
+#imagem-preview {
+    max-width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+}
+
+
+.menu-gerado {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-1);
+    margin: 0;
+    padding: var(--space-2);
+    list-style: none;
+    background-color: var(--color-bg-nav);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-md);
+}
+
+.menu-gerado:empty::before {
+    content: "Adicione um item para visualizar o menu.";
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+
+.item-menu-gerado {
+    display: block;
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-bg-surface);
+    color: var(--color-link);
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+    cursor: pointer;
+}
+
+.item-menu-gerado.item-selecionado {
+    outline: 2px solid var(--color-link-hover);
+    outline-offset: 2px;
+}
+
+.editor input[type="text"] {
+    width: 100%;
+    padding: var(--space-1);
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+    margin-bottom: 10px;
+}
+
+.editor input[type="color"] {
+    width: 3rem;
+    height: 2rem;
+    padding: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+    appearance: auto;
+    -webkit-appearance: auto;
+    accent-color: var(--color-link);
+}
+
+.editor input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+    appearance: auto;
+    -webkit-appearance: auto;
+    accent-color: var(--color-link);
+}
+
+.editor select,
+.editor input[type="file"] {
+    width: 100%;
+    padding: var(--space-1);
+    background-color: var(--color-bg-surface);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+}
+
+.editor input[type="file"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+}
+
+.editor select {
+    appearance: auto;
+    -webkit-appearance: auto;
+}
+
+.editor button {
+    margin-top: var(--space-1);
+    padding: var(--space-1) var(--space-2);
+    background-color: var(--color-bg-nav);
+    color: var(--color-link);
+    border: 1px solid var(--color-border);
+    border-radius: var(--space-1);
+}
+
+.editor button:hover,
+.editor button:focus-visible {
+    background-color: var(--color-bg-page);
+    color: var(--color-link-hover);
+}
+
+
+@media (max-width: 40rem) {
+    .menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .menu a {
+        text-align: center;
+    }
+
+    .editor-layout {
+        flex-direction: column;
+    }
+
+    .editor form,
+    .menu-preview {
+        width: 100%;
+    }
+
+}

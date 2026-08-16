@@ -1,0 +1,91 @@
+html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+body {
+    min-width: 320px;
+    background-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+    font-family: var(--font-family-base);
+    line-height: 1.5;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-text-primary);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 25px;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-2);
+}
+
+p {
+    margin-bottom: var(--space-2);
+}
+
+a {
+    color: var(--color-link);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--color-link-hover);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    overflow-wrap: break-word;
+}
+
+figcaption {
+    margin-top: var(--space-1);
+    color: var(--color-text-secondary);
+    font-size: 0.8125rem;
+    text-align: center;
+}
