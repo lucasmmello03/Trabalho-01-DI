@@ -9,7 +9,6 @@ const corMenu = document.getElementById("cor-menu");
 const espacamentoMenu = document.getElementById("espacamento-menu");
 const direcaoMenu = document.getElementById("direcao-menu");
 const imagemMenu = document.getElementById("imagem-menu");
-const imagemPreview = document.getElementById("imagem-preview");
 const botaoAdicionar = document.getElementById("btn-adicionar");
 const botaoAtualizar = document.getElementById("btn-atualizar");
 const botaoExcluir = document.getElementById("btn-excluir");
@@ -40,6 +39,7 @@ function adicionar() {
     itemDiv.textContent = texto;
 
     aplicarEstiloNoItem(itemDiv);
+
     itemDiv.addEventListener("click", function () {
         selecionarItem(itemDiv);
     });
