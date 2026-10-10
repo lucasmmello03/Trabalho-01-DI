@@ -37,3 +37,9 @@ footer {
     color: var(--color-text-secondary);
     text-align: center;
 }
+
+meu-header,
+meu-nav,
+meu-footer {
+    display: block;
+}

@@ -79,7 +79,7 @@
 }
 
 /* Prova on-line */
-main > section[aria-labelledby="titulo-prova"] {
+main>section[aria-labelledby="titulo-prova"] {
     max-width: 52rem;
     margin-inline: auto;
     padding: clamp(var(--space-2), 4vw, var(--space-4));
@@ -89,98 +89,30 @@ main > section[aria-labelledby="titulo-prova"] {
     box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 16%);
 }
 
-main > section[aria-labelledby="titulo-prova"] > h2 {
+main>section[aria-labelledby="titulo-prova"]>h2 {
     color: var(--color-link);
     font-size: clamp(1.6rem, 4vw, 2.2rem);
 }
 
-main > section[aria-labelledby="titulo-prova"] > p {
+main>section[aria-labelledby="titulo-prova"]>p {
     color: var(--color-text-secondary);
 }
 
-main > section[aria-labelledby="titulo-prova"] form {
+.lista-cartoes {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
     gap: var(--space-2);
-    margin-top: var(--space-3);
+    margin-top: var(--space-2);
 }
 
-main > section[aria-labelledby="titulo-prova"] fieldset {
-    min-width: 0;
-    margin: 0;
-    padding: var(--space-2);
-    border: 1px solid var(--color-border);
-    border-radius: var(--space-1);
-}
-
-main > section[aria-labelledby="titulo-prova"] legend {
-    max-width: 100%;
-    padding-inline: var(--space-1);
-    color: var(--color-text-primary);
-    font-weight: 700;
-}
-
-main > section[aria-labelledby="titulo-prova"] fieldset label {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--space-1);
-    margin-top: var(--space-1);
-    padding: var(--space-1);
-    border-radius: var(--space-1);
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-main > section[aria-labelledby="titulo-prova"] fieldset label:hover {
-    background-color: var(--color-bg-nav);
-}
-
-main > section[aria-labelledby="titulo-prova"] input[type="radio"] {
-    flex: 0 0 auto;
-    margin: 0.25em 0 0;
-    accent-color: var(--color-link);
-}
-
-main > section[aria-labelledby="titulo-prova"] button {
-    justify-self: start;
-    min-height: 2.75rem;
-    padding: var(--space-1) var(--space-3);
-    color: var(--color-bg-page);
-    font-weight: 700;
-    background-color: var(--color-link);
-    border: 1px solid var(--color-link);
-    border-radius: var(--space-1);
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-main > section[aria-labelledby="titulo-prova"] button:hover {
-    background-color: var(--color-link-hover);
-    transform: translateY(-1px);
-}
-
-main > section[aria-labelledby="titulo-prova"] button:focus-visible,
-main > section[aria-labelledby="titulo-prova"] input[type="radio"]:focus-visible {
-    outline: 3px solid var(--color-link-hover);
-    outline-offset: 3px;
-}
-
-#resultado {
-    margin-top: var(--space-3);
-    padding: var(--space-2);
-    background-color: var(--color-bg-page);
-    border: 1px dashed var(--color-border);
-    border-radius: var(--space-1);
-}
-
-#resultado h3 {
-    margin-bottom: var(--space-1);
+.lista-cartoes h3 {
     color: var(--color-link);
 }
 
-#resultado p:last-child {
-    margin-bottom: 0;
+.lista-cartoes p {
+    flex: 1;
+    margin: 0;
 }
-
 
 #imagem-preview {
     max-width: 100%;
@@ -309,17 +241,9 @@ main > section[aria-labelledby="titulo-prova"] input[type="radio"]:focus-visible
         width: 100%;
     }
 
-    main > section[aria-labelledby="titulo-prova"] {
+    main>section[aria-labelledby="titulo-prova"] {
         padding: var(--space-2);
         border-radius: var(--space-1);
-    }
-
-    main > section[aria-labelledby="titulo-prova"] fieldset {
-        padding: var(--space-1);
-    }
-
-    main > section[aria-labelledby="titulo-prova"] button {
-        justify-self: stretch;
     }
 
 }

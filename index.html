@@ -16,29 +16,13 @@
         href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
         rel="stylesheet">
 
-
+    <script src="js/componentes.js" defer></script>
 
 </head>
 
 <body>
 
-    <header id="topo">
-        <img src="assets/img/logo-transparent.webp" alt="Logo Lucas Mello">
-        <h1 id="titulo_destaque">Portfólio Semestral</h1>
-
-
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="editor.html">Trabalho 1</a></li>
-                <li><a href="trabalho2.html">Trabalho 2</a></li>
-                <li><a href="trabalho3.html">Trabalho 3</a></li>
-                <li><a href="trabalho4.html">Trabalho 4</a></li>
-            </ul>
-        </nav>
-
-
-    </header>
+    <meu-header></meu-header>
 
 
 
@@ -80,6 +64,34 @@
                 disposição de um menu, visualizando as mudanças em tempo real.
             </p>
 
+        </section>
+
+                <section id="trabalhos">
+            <h2>Trabalhos do semestre</h2>
+
+            <div class="lista-cartoes">
+                <meu-cartao>
+                    <h3 slot="titulo">Trabalho 1</h3>
+                    <p slot="descricao">Editor de menus com preview em tempo real.</p>
+                    <a slot="link" href="editor.html">Acessar</a>
+                </meu-cartao>
+
+                <meu-cartao>
+                    <h3 slot="titulo">Trabalho 2</h3>
+                    <p slot="descricao">Prova on-line feita como web component.</p>
+                    <a slot="link" href="trabalho2.html">Acessar</a>
+                </meu-cartao>
+
+                <meu-cartao>
+                    <h3 slot="titulo">Trabalho 3</h3>
+                    <p slot="descricao">Em breve.</p>
+                </meu-cartao>
+
+                <meu-cartao>
+                    <h3 slot="titulo">Trabalho 4</h3>
+                    <p slot="descricao">Em breve.</p>
+                </meu-cartao>
+            </div>
         </section>
 
 
@@ -133,11 +145,8 @@
 
     </main>
 
-    <footer>
-
-        <p>Página desenvolvida por: Lucas Melo De Mello</p>
-
-    </footer>
+    <meu-footer></meu-footer>
+    
 </body>
 
 </html>
