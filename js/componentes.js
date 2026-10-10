@@ -1,10 +1,11 @@
 class MeuHeader extends HTMLElement {
     constructor() {
         super();
+        const titulo = this.innerHTML;
         this.innerHTML = `
             <header id="topo">
                 <img src="assets/img/logo-transparent.webp" alt="Logo Lucas Mello">
-                <h1 id="titulo_destaque">Portfólio Semestral</h1>
+                ${titulo}
                 <meu-nav></meu-nav>
             </header>`;
     }
@@ -36,6 +37,8 @@ class MeuFooter extends HTMLElement {
     }
 }
 
+// Cartão com Shadow DOM e slots: cada página que usar o <meu-cartao>
+// escolhe o conteúdo que vai em cada slot (titulo, descricao e link).
 class MeuCartao extends HTMLElement {
     constructor() {
         super();
