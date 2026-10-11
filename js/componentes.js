@@ -37,8 +37,7 @@ class MeuFooter extends HTMLElement {
     }
 }
 
-// Cartão com Shadow DOM e slots: cada página que usar o <meu-cartao>
-// escolhe o conteúdo que vai em cada slot (titulo, descricao e link).
+
 class MeuCartao extends HTMLElement {
     constructor() {
         super();
